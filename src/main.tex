@@ -1,0 +1,342 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{changepage}
+\usepackage{framed}
+\usepackage{biblatex}
+\usepackage{filecontents}
+\usepackage[italian]{babel}
+
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{
+    \put(0,0){
+        \parbox[b][\paperheight]{\paperwidth}{
+            \vfill
+            \centering
+            \includegraphics[width=\paperwidth,height=\paperheight]{background}
+            \vfill
+        }
+    }
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    pdftitle={Laovor PDI},
+    pdfpagemode=FullScreen,
+}
+
+%\begin{filecontents}{references.bib}
+%@online{paolobettelini,
+%  author    = {Paolo Bettelini},
+%  title     = {notes},
+%  year      = {2022},
+%  publisher = {GitHub},
+%  journal   = {GitHub repository},
+%  url       = {https://github.com/paolobettelini/notes}
+%}
+%\end{filecontents}
+
+%\addbibresource{references.bib}
+\graphicspath{ {./images/} }
+
+\title{
+    \textsc{Il ruolo dello Stato democratico nella società umana}
+    \\
+    {\small \textsc{La democrazia nel sistema giudiziario}}
+}
+
+\author{
+    \textsc{Paolo Bettelini}
+    \\
+    \textsc{\large Scuola d'Arti e Mestieri di Trevano (SAMT)}
+}
+
+\date{\textsc{\today}}
+
+\begin{document}
+
+\AddToShipoutPicture*{\BackgroundPic}
+
+\makeatletter
+\renewcommand{\maketitle}{
+    \vspace*{20pt}
+    \begin{adjustwidth}{}{-1in}
+        \begin{flushright}
+            \begin{tcolorbox}[sharp corners,
+                colback=white,
+                colframe=white,
+                text width=\dimexpr9cm+1in]
+                
+                \centering
+                
+                {\LARGE\@title}
+                
+                \vspace{30pt}
+                
+                {\large\@author}
+                
+                \@date
+                
+                \vspace{20pt}
+            \end{tcolorbox}
+        \end{flushright}
+    \end{adjustwidth}
+
+    \vspace{12cm}
+
+    \begin{adjustwidth}{-1in}{}
+        \begin{flushleft}
+            \begin{tcolorbox}[sharp corners,
+                colback=white,
+                colframe=white,
+                text width=\dimexpr5cm+1in]
+                
+                Progetto Didattico Interdisciplinare
+                
+                Classe I4AC 2022/2023
+                
+                Monica Delucchi, Ursula Holliger
+            \end{tcolorbox}
+        \end{flushleft}
+    \end{adjustwidth}
+}
+\makeatother
+\maketitle
+
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\section{Introduzione}
+
+Durante la mia vita mi sono ritrovato a sviluppare dei pensieri
+spesso in discordia con la maggior parte delle popolazione.
+Mediante delle successioni di pensieri logici ho scoperto autonomamente concetti
+come il \textit{determinismo}, senza aver mai avuto nessun contatto con dei testi di filosofia.
+\\
+Questo lavoro è una riflessione personale che sviluppa i miei pensieri
+personali circa la moralità delle cose. Verranno trattate le implicazioni
+che questi concetti hanno sulla democrazia ed il sistema giudiziario.
+
+Il documento tratterà la democrazia semplicemente come il concetto di integrare i cittadini
+nel governo di una società. Non verranno discussi diversi modelli di democrazia o di stato.
+
+Le prime sezioni del documento introducono quelli che sono i concetti fondamentali per
+sviluppare il mio ragionamento. In seguito verranno trattate
+le implicazioni di questi concetti sulla moralità di uno stato e come si potrebbero
+ipoteticamente risolvere.
+
+\section{Etica e Morale}
+
+\subsection{Definizione}
+
+\paragraph{Morale}
+la morale è un insieme di pensieri, decisioni e comportamenti che secondo l'individuo
+che li esercita sono \textit{corretti} nei confrinti di sè stesso o terze parti.
+
+\paragraph{Etica}
+L'etica è un insieme di pratiche, comportanenti e di norme che vengono applicati
+per rispecchiare un'ideologia morale.
+
+\subsection{Il regno animale}
+
+\section{Il libero arbitrio}
+
+Il libro arbitrio è un concetto per il quale gli esseri umani
+(o in alcune eccezioni ogni essere cosciente) è in grado di decidere e agire secondo la propria volontà.
+L'essere è quindi libero di arbitrare le proprie azioni secondo la sua volontà.
+
+\section{Determinismo}
+
+\subsection{Definizione}
+
+Il determinismo è una corrente di pensiero che esprime l'idea
+che gli eventi dell'universo siano completamente determinati e prevedibili.
+
+\subsubsection{Determinismo duro}
+
+Il determinismo duro è la versione più severa del determinismo.
+Questo pensiero indica che tutti gli eventi siano strettamente
+determinabili dagli eventi dell'universo precedenti.
+Conoscendo l'esatto stato dell'universo in un dato istante \(t_n\), è possibile
+determinare un qualsiasi istante futuro \(t_{m > n}\).
+
+Questo ideologia è infatti in contrapposizione con il libero arbitrio.
+Dal momento che tutti gli eventi nell'universo sono determinati da altri fattori determinati
+o detemrinabili, i processi biologici che ci permettono di prendere delle decisioni e di pensare
+sono soggette al determinismo duro, in quanto facenti parti di un sistema fisico esistente nell'universo.
+
+\subsubsection{Compatibilismo}
+
+Il compatibilismo è una corrente di pensieri che prevede appunto una compatibilità
+fra il libero arbitrio ed il determinismo. Un'accezione generica di questa ideologia
+implica che l'uomo abbia infatti il poterte di scegliere liberamente secondo la sua volontà.
+
+\subsection{Determinismo nella fisica}
+
+Il mondo in cui viviamo è governato dalla meccanica.
+Tutte le nostre azioni quotidiane sono governate dalla meccanica.
+Guidare l'auto, fare cadere un oggetto, camminare etc. sono tutte azioni
+che rispettano delle leggi fisiche ben conosciute. \\
+Agli inizi del XX secolo la comunità scientifica ha cominciato ad esplorare ciò che
+è la meccanica quantistica. Queste nuovi leggi secondo le quali il nostro universo funziona
+ad un livello microscopico, hanno generato diverse critiche verso il determinismo.
+
+\subsubsection{Principio di Indeterminazione di Heisenberg}
+
+Il principio di indeterminazione di Heisenberg è molto importante nelle discussioni
+legale al determinismo e alla natura intrinseca dell'universo.
+Questo concetto indica infatti che, considerando un oggetto quantistico (di dimensioni molto piccole),
+l'ammontare di conoscenza sulla sua velocità è inversamente proporzionale all'ammontare
+di conoscenza sulla sua posizione.
+Se conosciamo esattamente la posizione di un oggetto, non sappiamo nulla sulla sua velocità.
+Se conosciamo esattamente la sua velocità, non sappiamo nulla sulla posizione. Se siamo un po'
+incerti sulla sua velocità, siamo anche un po' incerti sulla sua posizione.
+La nostra conoscenza \textit{simultanea} di alcune proprietà è vincolata da delle leggi fisiche. \\
+Questa affermazione può sembrare assurda e priva di senso, ma nel campo quantistico
+alcune proprietà sono descritte da delle probabilità piuttosto che da dei valori sempre concreti.
+
+Considerando questo fenomeno possiamo nel determinismo giungiamo ad una contraddizione.
+Non è possibile conoscere lo stato dell'universo ad un certo istante se non possiamo
+conoscere simultaneamente tutte le proprietà del nostro sistema.
+
+\subsubsection{Eventi casuali}
+
+La fisica quantistica è governata da funzioni probabilistiche.
+Basti pensare semplicemente alla posizione di un elettrone. La posizione di un elettrone
+di un sistema può essere descritta da una \textit{funzione d'onda}. Questa funzione descrive
+la probabilità di misurare l'elettrone in un certo punto. Per esempio, considerando un elettrone libero
+di trovarsi su una linea, potrebbe essere molto probabile che esso venga misurato essere nello spazio centrale, mentre
+poco probabile che si trovi agli estremi.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{wavefunction.jpg}
+    \caption{Funzione d'onda}
+\end{figure}
+
+La natura deterministica dell'universo è dunque strettamente legata all'esistenza di
+eventi puramente casuali.
+
+\paragraph{Evento puramente casuale} un evento puramente casuale è un qualsiasi evento che potrebbe svolgersi in maniera differente se l'universo venisse riavvolto per ripetere nuovamente tale evento, senza che l'esecuzione dell'evento a priori abbia alcun effetto sulla nuova esecuzione.
+
+Se nell'universo sono presenti eventi puramente casuali il determinismo non è corretto
+in quanto non tutti gli avvenimento sono deducibili dagli eventi precedenti.
+
+Gli eventi casuali presenti nella meccanica quantistica sono puramente casuali
+oppure possono essere deducibili da altri fattori?
+Questa è la domanda saliente circa il determinismo. La scienza non è mai riuscita a dimostrare
+o sfatare nessuna delle due ipotesi.
+
+\subsection{Determinismo nell'anatomia}
+
+La seguente sezione tratta in maniera generale il funzionamento del cervello
+e come prendiamo ogni decisione.
+
+Il cervello è certamente una macchina molto complessa che nessuno
+comprende pienamente. Tuttavia, la scienza riesce a spiegare a grandi linee
+il sistema decisionale. Questo sistema si basa su tante piccole strutture cellulari
+facenti parti del sistema neuroso, i \textit{neuroni}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{neuron.png}
+    \caption{Struttura neuronale}
+\end{figure}
+
+[...]
+
+Possiamo dunque dedurre che ogni decisione mai presa da ognuno di noi è
+sostanzialmente dipendente da 3 fattori:
+\begin{enumerate}
+    \item Configurazione genetica iniziale
+    \item Eventi vissuti
+    \item Ambiente circostante
+\end{enumerate}
+
+\paragraph{Configurazione genetica iniziale}
+Il modo di pensare è certamente diverso fra persona e persona.
+Uno dei fattori molto importanti è la configurazione anatomica iniziale del cervello,
+per cui la configurazione iniziale di sinapsi, neuroni etc. alla nascita.
+
+\paragraph{Eventi vissuti}
+Ogni evento vissuto può modificare la nostra capacità di pensare.
+Un evento può consistere in un interazione fisica o semplicemente qualcosa di visto.
+Durante la vita la configurazioni delle sinapsi evolve costantemente. Provare certe esperienze
+o trovarsi in certe situazioni può certamente alterare la nostra capacità cognitiva.
+Un evento può per esempio consistere all'alterazione fisica del cervello, come per esempio
+un intervento di leucotomia oppure la malattia del morbo di Alzheimer.
+
+\paragraph{Ambiente circostante}
+Al momento di prendere una decisione l'ambiente circostante è uno dei principali fattori
+principali. A seconda della situazioni, cerchiamo di prendere una decisione auspicabile
+per affrontare quest'ultima.
+
+\subsection{Determinismo nella filosofia}
+
+\subsection{Determinismo nella politica}
+
+\subsection{Implicazioni nella moralità}
+
+Assumendo il determinismo si giunge ad un concetto che può essere molto pericoloso per una società
+e le persone stesse. Questo concetto è la perdita del significato della colpa, del merito e altri simili.
+
+\section{Il sistema giudiziario}
+
+\subsection{Definizione e democrazia}
+
+Il sistema giudiziario è un ente che si occupa di condannare gli atti illeciti.
+
+\subsection{Funzionamento}
+
+\subsection{Nella storia}
+
+\subsubsection{La legge del taglione}
+
+
+\subsubsection{La legge del contrappasso}
+\subsubsection{La ghigliottina}
+\subsubsection{Cesare Beccaria}
+
+Cesare Beccaria (1738-1794) è stato un giurista e filosofo francese.
+Nel 1764 pubblica "Dei delitti e delle pene" (cita) 
+dove esamna una serie di difetti nel sistema dell'epoca che imponevano una giustizia equa.
+Questa'opera è molto importante poiché delimita il peccatto (peccato religioso
+che viene giudicato da Dio) da ciò che bisogna considerare da un punto di vista giuridico,
+applicando leggi eque e uguali per tutti.
+
+Cesare Beccaria era contrario alla pena di morte e alla tortura, infatti,
+voleva dimostrare che queste metodologie fossero inefficaci e disumani.
+Una delle sue idee primarie era l'importanza di prevenire un delitto piuttosto che punirlo.
+
+\subsection{Moralità nel sistema giudiziario}
+
+[punto principale del PDI] \\
+Dati i ragionamenti logici nelle sezioni precedenti, è morale punire
+un criminale?
+
+\subsection{Implementazione alternativa}
+
+\section{Conclusione}
+
+\pagebreak
+
+\listoffigures
+
+\pagebreak
+
+%\nocite{*} % cite all entries
+
+%\printbibliography[heading=subbibliography]
+
+\end{document}
