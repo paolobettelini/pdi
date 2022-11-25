@@ -34,18 +34,39 @@
     pdfpagemode=FullScreen,
 }
 
-%\begin{filecontents}{references.bib}
-%@online{paolobettelini,
-%  author    = {Paolo Bettelini},
-%  title     = {notes},
-%  year      = {2022},
-%  publisher = {GitHub},
-%  journal   = {GitHub repository},
-%  url       = {https://github.com/paolobettelini/notes}
-%}
-%\end{filecontents}
+\begin{filecontents}{references.bib}
+@article{penguins,
+    author = {Russell, Douglas and Sladen, William and Ainley, David},
+    year = {2012},
+    month = {10},
+    pages = {},
+    title = {Dr. George Murray Levick (1876-1956): Unpublished notes on the sexual habits of the Adélie penguin},
+    volume = {48},
+    journal = {Polar Record},
+    doi = {10.1017/S0032247412000216}
+}
+@article{rowlands2012oxford,
+  title={The Oxford Handbook of Animal Ethics},
+  author={Rowlands, Mark and Beauchamp, Tom L and Frey, Raymond G},
+  year={2012},
+  publisher={Oxford University Press}
+}
+@book{andrews2018routledge,
+  title={The Routledge handbook of philosophy of animal minds},
+  author={Andrews, Kristin and Beck, Jacob},
+  year={2018},
+  publisher={Routledge London, New York}
+}
+@book{rowlands2015can,
+  title={Can animals be moral?},
+  author={Rowlands, Mark},
+  year={2015},
+  publisher={Oxford University Press}
+}
+\end{filecontents}
 
-%\addbibresource{references.bib}
+\addbibresource{references.bib}
+
 \graphicspath{ {./images/} }
 
 \title{
@@ -176,6 +197,18 @@ per rispecchiare un'ideologia morale collettiva.
 
 \subsection{Il regno animale}
 
+Seppur molti animali mostrino comportamenti empatici e molte emozioni umani,
+molte specie commettono azioni che potrebbero essere giudicate come spregevoli da noi umani.
+Senza considerare il bisogno naturale del cacciatore di uccidere, talvolta in maniera brutale,
+la preda per sopprivvivere, le azioni considerate da noi immorali riguardando
+anche l'ambito sociale fra gli animali e quello sessuali.
+Per esempio, alcune specie di pinguini sono stati osservati praticare
+pedofilia, necrofilia, stupro e addirittura stupro di altri pinguini soccombenti
+\cite{penguins}.
+
+Gli animali dimostrano comunque comportamenti guidati da principi morali
+\cite{rowlands2012oxford} \cite{rowlands2015can} \cite{andrews2018routledge}.
+
 \section{Il libero arbitrio}
 
 Il libro arbitrio è un concetto per il quale gli esseri umani
@@ -221,6 +254,7 @@ che rispettano delle leggi fisiche ben conosciute. \\
 Agli inizi del XX secolo la comunità scientifica ha cominciato ad esplorare ciò che
 è la meccanica quantistica. Queste nuovi leggi secondo le quali il nostro universo funziona
 ad un livello microscopico, hanno generato diverse critiche verso il determinismo.
+Queste leggi potrebbero infatti indicare che l'universo non si basa unicamente su eventi deterministici ma anche eventi casuali.
 
 \subsubsection{Principio di indeterminazione di Heisenberg}
 
@@ -265,22 +299,38 @@ poco probabile che si trovi agli estremi.
 La natura deterministica dell'universo è dunque strettamente legata all'esistenza di
 eventi puramente casuali.
 
-\paragraph{Evento puramente casuale} un evento puramente casuale è un qualsiasi evento che potrebbe svolgersi in maniera differente se l'universo venisse riavvolto per ripetere nuovamente tale evento, senza che l'esecuzione dell'evento a priori abbia alcun effetto sulla nuova esecuzione.
+\paragraph{Un evento pseudo-casuale} o un numero pseudo-casuale è un evento
+che approssima una probabilità ma sono è realtà deterministico.
+Il lancio di un dado o di una moneta sono degli eventi pseudo-casuali.
+La probabilità che una moneta atterri in una certa maniera è 50\%, tuttavia,
+questo risultato è ben definito dalle leggi fisiche della meccanica. \\
+Un altro esempio sono i numeri randomici generati dai computer, essi sono infatti
+pseudo-casuali. Il computer sfrutta il numero di millisecondi passati dall'1 gennaio 1970 (unix-time).
+Questo valore è molto volatile e per cui ottimale per generare una distribuzione
+omogenea di numeri casuali. \\
+Ci sono molti valori volatili in natura. Misurare la temperatura con un termometro
+e considerare alcune cifre dalla decima cifra in poi dopo la virgola risulta
+in un numero quasi casuali.
+Tutti questi fenomeni possono essere ricostruiti date le condizioni di partenza.
+
+\paragraph{Un evento puramente casuale} è un qualsiasi evento che potrebbe svolgersi in maniera differente se l'universo venisse riavvolto per ripetere nuovamente tale evento, senza che l'esecuzione dell'evento a priori abbia alcun effetto sulla nuova esecuzione.
 
 Se nell'universo sono presenti eventi puramente casuali il determinismo non è corretto
 in quanto non tutti gli avvenimento sono deducibili dagli eventi precedenti.
 
 Gli eventi casuali presenti nella meccanica quantistica sono puramente casuali
-oppure possono essere deducibili da altri fattori?
-Questa è la domanda saliente circa il determinismo. La scienza non è mai riuscita a dimostrare
-o sfatare nessuna delle due ipotesi.
+oppure possono essere deducibili da altri fattori (pseudo-casuali)?
+Questa è la domanda saliente circa il determinismo.
+Se gli eventi puramente casuali dovessero esistere l'universo non si potrebbe basare unicamente
+su regole deterministiche.
+La scienza non è mai riuscita a dimostrare o sfatare nessuna delle due ipotesi.
 
 \subsection{Determinismo nell'anatomia}
 
 La seguente sezione tratta in maniera generale il funzionamento del cervello
 e come prendiamo ogni decisione.
 
-Il cervello è certamente una macchina molto complessa che nessuno
+Il cervello è una macchina molto complessa che nessuno
 comprende pienamente. Tuttavia, la scienza riesce a spiegare a grandi linee
 il sistema decisionale. Questo sistema si basa su tante piccole strutture cellulari
 facenti parti del sistema neuroso, i \textit{neuroni}.
@@ -304,14 +354,14 @@ sostanzialmente dipendente da 3 fattori:
 \paragraph{Configurazione genetica iniziale}
 Il modo di pensare è certamente diverso fra persona e persona.
 Uno dei fattori molto importanti è la configurazione anatomica iniziale del cervello,
-per cui la configurazione iniziale di sinapsi, neuroni etc. alla nascita.
+ossia la configurazione iniziale di sinapsi, neuroni etc. alla nascita.
 
 \paragraph{Eventi vissuti}
 Ogni evento vissuto può modificare la nostra capacità di pensare.
 Un evento può consistere in un'interazione fisica o semplicemente qualcosa di visto.
 Durante la vita le configurazioni delle sinapsi evolve costantemente. Provare certe esperienze
 o trovarsi in certe situazioni può certamente alterare la nostra capacità cognitiva.
-Un evento può per esempio consistere all'alterazione fisica del cervello, come per esempio
+Un evento può per esempio consistere nell'alterazione fisica del cervello, come per esempio
 un intervento di leucotomia oppure la malattia del morbo di Alzheimer.
 
 \paragraph{Ambiente circostante}
@@ -326,7 +376,7 @@ per affrontare quest'ultima.
 \subsection{Implicazioni nella moralità}
 
 Assumendo il determinismo si giunge ad un concetto che può essere molto pericoloso per una società
-e le persone stesse. Questo concetto è la perdita del significato della colpa, del merito e altri simili.
+e le persone stesse. Questo concetto è la perdita del significato della colpa o della responsabilità, del merito e altri simili.
 
 \section{Il sistema giudiziario}
 
@@ -375,6 +425,6 @@ un criminale?
 
 %\nocite{*} % cite all entries
 
-%\printbibliography[heading=subbibliography]
+\printbibliography[heading=subbibliography]
 
 \end{document}
