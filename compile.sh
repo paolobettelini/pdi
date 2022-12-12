@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ "$1" = "" ]; then
-  echo "Usage: $0 <title> [--bibtex]"
+if [ "$2" = "--help" ]; then
+  echo "Usage: $0 [--bibtex]"
   echo ""
   echo "--bibtex    Compile new bibtex references using biber"
   exit
@@ -17,5 +17,5 @@ fi
 
 lualatex *.tex
 
-mv pdi.pdf ../main.pdf
+mv main.pdf ../pdi.pdf
 cd ..;

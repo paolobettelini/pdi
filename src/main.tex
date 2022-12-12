@@ -11,10 +11,12 @@
 \usepackage{changepage}
 \usepackage{framed}
 \usepackage[sorting=none]{biblatex}
-\usepackage{filecontents}
+\usepackage{csquotes}
 \usepackage[italian]{babel}
-
 \usepackage{eso-pic}
+
+\graphicspath{ {./images/} }
+
 \newcommand\BackgroundPic{
     \put(0,0){
         \parbox[b][\paperheight]{\paperwidth}{
@@ -34,40 +36,7 @@
     pdfpagemode=FullScreen,
 }
 
-\begin{filecontents}{references.bib}
-@article{penguins,
-    author = {Russell, Douglas and Sladen, William and Ainley, David},
-    year = {2012},
-    month = {10},
-    pages = {},
-    title = {Dr. George Murray Levick (1876-1956): Unpublished notes on the sexual habits of the Adélie penguin},
-    volume = {48},
-    journal = {Polar Record},
-    doi = {10.1017/S0032247412000216}
-}
-@article{rowlands2012oxford,
-  title={The Oxford Handbook of Animal Ethics},
-  author={Rowlands, Mark and Beauchamp, Tom L and Frey, Raymond G},
-  year={2012},
-  publisher={Oxford University Press}
-}
-@book{andrews2018routledge,
-  title={The Routledge handbook of philosophy of animal minds},
-  author={Andrews, Kristin and Beck, Jacob},
-  year={2018},
-  publisher={Routledge London, New York}
-}
-@book{rowlands2015can,
-  title={Can animals be moral?},
-  author={Rowlands, Mark},
-  year={2015},
-  publisher={Oxford University Press}
-}
-\end{filecontents}
-
 \addbibresource{references.bib}
-
-\graphicspath{ {./images/} }
 
 \title{
     \textsc{Il ruolo dello Stato democratico nella società umana}
@@ -335,7 +304,7 @@ comprende pienamente. Tuttavia, la scienza riesce a spiegare a grandi linee
 il sistema decisionale. Questo sistema si basa su tante piccole strutture cellulari
 facenti parti del sistema neuroso, i \textit{neuroni}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.75\textwidth]{neuron.png}
     \caption{Struttura neuronale}
