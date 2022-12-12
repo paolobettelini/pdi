@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{tcolorbox}
+\usepackage{tikz}
 \usepackage{changepage}
 \usepackage{framed}
 \usepackage[sorting=none]{biblatex}
@@ -16,6 +17,8 @@
 \usepackage{eso-pic}
 
 \graphicspath{ {./images/} }
+
+\newcommand{\quotes}[1]{``#1''}
 
 \newcommand\BackgroundPic{
     \put(0,0){
@@ -115,7 +118,7 @@
 \subsection{Il progetto didattico interdisciplinare}
 
 Il progetto didattico interdisciplinare (PDI) è un lavoro originale e personale
-con un tema. Il tema generale è "Il ruolo dello Stato democratico nella società umana".
+con un tema. Il tema generale è \quotes{Il ruolo dello Stato democratico nella società umana}.
 Ho scelto di affrontare questo tema parlando della moralità del sistema giudiziario,
 una parte fondamentale di ogni democazia.
 
@@ -177,14 +180,20 @@ pedofilia, necrofilia, stupro e addirittura stupro di altri pinguini soccombenti
 
 Gli animali dimostrano comunque comportamenti guidati da principi morali
 \cite{rowlands2012oxford} \cite{rowlands2015can} \cite{andrews2018routledge}.
+Possono infatti mostrare comportamenti che potrebbero essere considerati morali dal punto di vista umano,
+come prendersi cura dei loro piccoli o aiutare i loro simili in difficoltà.
 
 \section{Il libero arbitrio}
 
 Il libro arbitrio è un concetto per il quale gli esseri umani
 (o, in alcune eccezioni, ogni essere cosciente) sono in grado di decidere e agire secondo la propria volontà.
 L'essere è quindi libero di arbitrare le proprie azioni secondo la sua volontà.
+Molte filosofie e teorie religiose credono infatti che l'essere umano sia in grado
+di scegliere il proprio destino secondo il proprio arbitrio.
 
- \section{Il determinismo}
+\pagebreak
+
+\section{Il determinismo}
 
 \subsection{Definizione}
 
@@ -202,6 +211,9 @@ Questo pensiero indica che tutti gli eventi siano strettamente
 determinabili dagli eventi dell'universo precedenti.
 Conoscendo l'esatto stato dell'universo in un dato istante \(t_n\), è possibile
 determinare un qualsiasi istante futuro \(t_{m > n}\).
+Questo implica anche che tutto il future dell'universo sia,
+in un certo senso, predeterminato, dal momento che ogni evento è destinato
+a succedere in una certa maniera.
 
 Questo ideologia è in contrapposizione con il libero arbitrio.
 Dal momento che tutti gli eventi nell'universo sono determinati da altri fattori determinati
@@ -213,6 +225,17 @@ sono soggette al determinismo duro, in quanto facenti parti di un sistema fisico
 Il compatibilismo è una corrente di pensiero che prevede una compatibilità
 fra il libero arbitrio ed il determinismo. Un'accezione generica di questa ideologia
 implica che l'uomo abbia infatti il potere di scegliere liberamente secondo la sua volontà.
+Tuttavia, questa teoria è molto criticata e molte persone credono che
+il libero arbitrio e il determinismo siano concetti inconciliabili.
+Il concetto che l'essere umano abbia la capacità di scegliere liberamente le proprie azioni,
+ma queste scelte siano comunque determinate da cause esterne,
+come le proprie inclinazioni, le proprie esperienze e le proprie circostanze,
+è fondamentalmente contrario al determinismo.
+Esiste anche un'accezione del compatibilismo in cui le azioni sono
+esenti dai fenomeni deterministici in quanto strettamente legate alla coscienza o all'anima.
+Questa accezione implica l'esistenza di una proprietà non tnagibile
+appartenenti agli essereri viventi, l'anima, la quale permetterebbe di compiere
+azioni puramente dettate dal proprio io spirituale.
 
 \subsection{Determinismo nella fisica}
 
@@ -229,7 +252,7 @@ Queste leggi potrebbero infatti indicare che l'universo non si basa unicamente s
 
 Il principio di indeterminazione di Heisenberg è molto importante nelle discussioni
 legale al determinismo e alla natura intrinseca dell'universo.
-Questo concetto indica infatti che, considerando un oggetto quantistico (di dimensioni molto piccole),
+Questo principio fisico indica infatti che, considerando un oggetto quantistico (di dimensioni molto piccole),
 l'ammontare di conoscenza sulla sua velocità è inversamente proporzionale all'ammontare
 di conoscenza sulla sua posizione.
 Se conosciamo esattamente la posizione di un oggetto, non sappiamo nulla sulla sua velocità.
@@ -242,6 +265,11 @@ alcune proprietà sono descritte da delle probabilità piuttosto che da dei valo
 Considerando questo fenomeno fisico possiamo giungere ad una contraddizione nel determinismo.
 Non è possibile conoscere lo stato dell'universo ad un certo istante se non possiamo
 conoscere simultaneamente tutte le proprietà del nostro sistema.
+Alcune proprieté sono intrinsecamente \textit{incerte}, per cui
+dettate da un sistema probabilistico. Questo vincolo implica che
+le azioni appartenenti ad un istante futuro \(t_m\) rispetto ad un istante
+\(t_{n < m}\) non sono determinabili in quanto dettati da eventi probabilistici
+e non solo semplici successioni di avvenimenti.
 
 \subsubsection{Eventi casuali}
 
@@ -261,7 +289,13 @@ poco probabile che si trovi agli estremi.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{wavefunction.jpg}
+    \begin{tikzpicture}
+        \draw[domain=-2:2, smooth, variable=\x, blue, very thick] plot ({\x}, {2.718^(-1*\x*\x)});
+    
+        \draw[->] (0, -0.25) -- (0, 1.25) node[above] {\(|\Psi(x,t)|^2\)};
+        \draw[->] (-2.25, 0) -- (2.25, 0);
+    \end{tikzpicture}
+    %\includegraphics[width=0.5\textwidth]{wavefunction.jpg}
     \caption{Funzione d'onda}
 \end{figure}
 
@@ -418,13 +452,21 @@ al fine di mantenere il quieto vivere.
 
 \subsubsection{La legge del taglione}
 
+La legge del taglione è un principio giuridico secondo il quale una persona
+che ha subito un torto ha il diritto di riparare il danno subito
+con un'azione simile a quella subita verso il responsabile del torto.
+Questa legge deriva dalla tradizione giuridica ebraica e viene spesso citata nella Bibbia.
+La legge del taglione è stata utilizzata in diverse culture e sistemi giuridici
+nel corso della storia, oggi non è più riconosciuta come un principio legale valido
+in molti paesi.
+Tuttavia, alcuni concetti legati alla legge del taglione
+sono ancora presenti nei sistemi giuridici odierni,
+come il principio della \quotes{pena adeguata} per un reato commesso.
 
-\subsubsection{La legge del contrappasso}
-\subsubsection{La ghigliottina}
 \subsubsection{Cesare Beccaria}
 
-Cesare Beccaria (1738-1794) è stato un giurista e filosofo francese.
-Nel 1764 pubblica "Dei delitti e delle pene" (cita) 
+Cesare Beccaria (1738-1794) è stato un giurista e filosofo italiano.
+Nel 1764 pubblica \quotes{Dei delitti e delle pene} (cita) 
 dove esamina una serie di difetti nel sistema dell'epoca che imponevano una giustizia equa.
 Questa'opera è molto importante poiché delimita il peccatto (peccato religioso
 che viene giudicato da Dio) da ciò che bisogna considerare da un punto di vista giuridico,
@@ -434,6 +476,14 @@ Cesare Beccaria era contrario alla pena di morte e alla tortura, infatti,
 voleva dimostrare che queste metodologie fossero inefficaci e disumani.
 Una delle sue idee primarie era l'importanza di prevenire un delitto piuttosto che punirlo.
 
+Beccaria era convinto che il sistema penale del suo tempo fosse iniquo e crudele,
+e che fosse necessario riformarlo per rendere le pene più umane e proporzionate ai reati commessi.
+Nel suo libro, Beccaria affermava che l'obiettivo principale delle pene non doveva essere la vendetta,
+ma la prevenzione dei reati stessi, specialmente mediante l'educazione dei cittadini.
+Le sue idee hanno influenzato profondamente il pensiero giuridico e politico dell'epoca
+e hanno contribuito ai principi della rivoluzione francese e alla nascita delle moderne
+costituzioni democratiche.
+
 \subsection{Moralità nel sistema giudiziario}
 
 [punto principale del PDI] \\
@@ -442,6 +492,8 @@ un criminale?
 
 Una persona che ha commesso un crimine ed è nefata
 per la popolazione non può certamente
+
+\subsection{La ghigliottina}
 
 \subsection{Implementazione alternativa}
 
