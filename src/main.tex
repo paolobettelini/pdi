@@ -15,6 +15,10 @@
 \usepackage{csquotes}
 \usepackage[italian]{babel}
 \usepackage{eso-pic}
+\usepackage{stackengine}
+\usepackage{adjustbox}
+
+\usetikzlibrary{arrows,positioning}
 
 \graphicspath{ {./images/} }
 
@@ -120,7 +124,7 @@
 Il progetto didattico interdisciplinare (PDI) è un lavoro originale e personale
 con un tema. Il tema generale è \quotes{Il ruolo dello Stato democratico nella società umana}.
 Ho scelto di affrontare questo tema parlando della moralità del sistema giudiziario,
-una parte fondamentale di ogni democazia.
+una parte fondamentale di ogni democrazia.
 
 \subsection{Biografia}
 
@@ -155,6 +159,99 @@ della sua impossibilità di non commettere le azioni che ha commesso.
 
 \pagebreak
 
+\subsection{Struttura}
+
+La struttura di questo documento può essere rappresentata dal seguente diagramma.
+
+\vspace{0.75cm}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    important/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,}
+}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[node distance=1cm, auto]
+        \node[important] (demo) {Democrazia};
+
+        \node[below=of demo] (sg) {Sistema Giudiziario}
+            edge[pil, <-] (demo);
+
+        \node[below=of sg] (center1) {};
+
+        \node[right=of center1] (mor) {Moralità};
+        \node[below=of center1] (pene) {Pene};
+        \node[left=of center1] (soc) {Società};
+
+        \path (sg.east) edge[->, pil, bend left=30] (mor);
+        \path (mor) edge[->, pil, bend left=30] (pene.east);
+        \path (pene.west) edge[->, pil, bend left=30] (soc);
+        \path (soc) edge[->, pil, bend left=30] (sg.west);
+        
+        \node[right=of mor] (lib) {\underline{Libero arbitrio}}
+            edge[pil, <-] (mor.east);
+
+        \node[right=of lib] (center2) {};
+
+        \node[above=of center2] (det) {Determinismo};
+        \node[below=of center2] (cas) {Casualità};
+
+        \path (lib) edge[->, pil, bend left=45] (det.west);
+        \path (lib) edge[<-, pil, bend right=45] (cas.west);
+        \path (det.east) edge[->, pil, bend left=45] (cas.east);
+
+        \node[below=of pene] {Cenni Storici}
+            edge[pil, <-] (pene);
+    \end{tikzpicture}
+    \caption{Struttura del documento}
+\end{figure}
+
+\newcommand{\ownright}[0]{% don't remove
+    \makebox(0,0){
+        \stackon[8pt]{\phantom{A}}{
+            \begin{tikzpicture}
+                \fill (0,0) -- (0,0.3) -- ++(0.05,0) -- (0.05,0);
+                \fill (0,0.3) -- ++(0.3,0) -- (0.3,0.25) -- (0.05,0.25);
+            \end{tikzpicture}
+        }
+    }%
+}
+
+\newcommand{\ownleft}[0]{% don't remove
+    \makebox(0,0){
+        \stackon[-8pt]{\phantom{A}}{
+            \begin{tikzpicture}
+                \fill (0,0) -- (0.3,0) -- ++(0,0.05) -- (0,0.05);
+                \fill (0.3,0) -- ++(0,0.3) -- (0.25,0.3) -- (0.25,0.05);
+            \end{tikzpicture}
+        }
+    }
+}
+
+\textbf{Nota}: i blocchi di testo racchiusi con \hspace{0.2cm}\ownright{}\quotes{}\ownleft{}
+\hspace{0.2cm} esprimono dei concetti che sono stati puramente sviluppati da me,
+senza l'ausilio di terze fonti.
+
+\vspace{1cm}
+
+\ownright{}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\ownleft{}
+
+\pagebreak
+
 \section{Etica e Morale}
 
 \subsection{Definizione}
@@ -167,13 +264,16 @@ che li esercita sono \textit{corretti} nei confronti di sé stesso o di terze pa
 L'etica è un insieme di pratiche, comportamenti e di norme che vengono applicati
 per rispecchiare un'ideologia morale collettiva.
 
+La moralità è certamente soggettiva ed è estremamente
+difficile esporne un'accezione in maniera oggettiva.
+
 \subsection{Il regno animale}
 
 Seppur molti animali mostrino comportamenti empatici e molte emozioni umani,
 molte specie commettono azioni che potrebbero essere giudicate come spregevoli da noi umani.
 Senza considerare il bisogno naturale del cacciatore di uccidere, talvolta in maniera brutale,
-la preda per sopprivvivere, le azioni considerate da noi immorali riguardando
-anche l'ambito sociale fra gli animali e quello sessuali.
+la preda per sopprivvivere, le azioni che noi potremmo ritenere immorali
+riguardando anche l'ambito sociale fra gli animali e quello sessuale.
 Per esempio, alcune specie di pinguini sono stati osservati praticare
 pedofilia, necrofilia, stupro e addirittura stupro di altri pinguini soccombenti
 \cite{penguins}.
@@ -217,7 +317,7 @@ a succedere in una certa maniera.
 
 Questo ideologia è in contrapposizione con il libero arbitrio.
 Dal momento che tutti gli eventi nell'universo sono determinati da altri fattori determinati
-o detemrinabili, i processi biologici che ci permettono di prendere delle decisioni e di pensare
+o determinabili, i processi biologici che ci permettono di prendere delle decisioni e di pensare
 sono soggette al determinismo duro, in quanto facenti parti di un sistema fisico esistente nell'universo.
 
 \subsubsection{Compatibilismo}
@@ -344,7 +444,25 @@ facenti parti del sistema neuroso, i \textit{neuroni}.
     \caption{Struttura neuronale}
 \end{figure}
 
-[...]
+I neuroni sono a loro volta composti da diversi elementi.
+I dendriti sono delle estensioni sottili e ramificate che ricevono segnali elettrici da altri neuroni.
+Il nucleo è un organello presente nel corpo cellulare di un neurone.
+Contiene il materiale genetico della cellula e ne controlla il metabolismo e
+altre funzioni.
+L'assone è un'estensione lunga e sottile di un neurone che conduce gli impulsi elettrici
+lontano dal corpo cellulare.
+Il corpo cellulare è la parte centrale di un neurone che contiene
+il nucleo cellulare e altri organelli.
+Le terminazioni assoniche sono piccole strutture alla fine di un assone che trasmettono
+segnali ad altre cellule. La zone di connessione
+fra due neuroni viene chiamata \textit{sinapsi}.
+
+Sostanzialmente, un neurone invia un impulso ad altri neuroni
+a seconda degli impulsi elettrici che riceve.
+Questa topologia è in costante cambiamento. Infatti,
+nuove connessioni fra neuroni sono sempre stabilite.
+L'insieme dei funzionamenti di tutti questi organi permettono al nostro
+corpo di prendere qualsiasi decisione.
 
 Possiamo dunque dedurre che ogni decisione mai presa da ognuno di noi è
 sostanzialmente dipendente da 3 fattori:
@@ -355,7 +473,7 @@ sostanzialmente dipendente da 3 fattori:
 \end{enumerate}
 
 \paragraph{Configurazione genetica iniziale}
-Il modo di pensare è certamente diverso fra persona e persona.
+Il modo di pensare è diverso fra persona e persona.
 Uno dei fattori molto importanti è la configurazione anatomica iniziale del cervello,
 ossia la configurazione iniziale di sinapsi, neuroni etc. alla nascita.
 
@@ -371,10 +489,6 @@ un intervento di leucotomia oppure la malattia del morbo di Alzheimer.
 Al momento di prendere una decisione l'ambiente circostante è uno dei principali fattori
 principali. A seconda della situazioni, cerchiamo di prendere una decisione auspicabile
 per affrontare quest'ultima.
-
-\subsection{Determinismo nella filosofia}
-
-\subsection{Determinismo nella politica}
 
 \subsection{Implicazioni nella moralità}
 
