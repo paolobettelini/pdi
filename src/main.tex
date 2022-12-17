@@ -35,6 +35,28 @@
     }
 }
 
+\newcommand{\ownright}[0]{% don't remove
+    \makebox(0,0){
+        \stackon[8pt]{\phantom{A}}{
+            \begin{tikzpicture}
+                \fill (0,0) -- (0,0.3) -- ++(0.05,0) -- (0.05,0);
+                \fill (0,0.3) -- ++(0.3,0) -- (0.3,0.25) -- (0.05,0.25);
+            \end{tikzpicture}
+        }
+    }%
+}
+
+\newcommand{\ownleft}[0]{% don't remove
+    \makebox(0,0){
+        \stackon[-8pt]{\phantom{A}}{
+            \begin{tikzpicture}
+                \fill (0,0) -- (0.3,0) -- ++(0,0.05) -- (0,0.05);
+                \fill (0.3,0) -- ++(0,0.3) -- (0.25,0.3) -- (0.25,0.05);
+            \end{tikzpicture}
+        }
+    }
+}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
@@ -161,7 +183,7 @@ della sua impossibilità di non commettere le azioni che ha commesso.
 
 \subsection{Struttura}
 
-La struttura di questo documento può essere rappresentata dal seguente diagramma.
+La struttura di questo lavoro può essere rappresentata con il seguente diagramma.
 
 \vspace{0.75cm}
 
@@ -220,35 +242,9 @@ La struttura di questo documento può essere rappresentata dal seguente diagramm
     \caption{Struttura del documento}
 \end{figure}
 
-\newcommand{\ownright}[0]{% don't remove
-    \makebox(0,0){
-        \stackon[8pt]{\phantom{A}}{
-            \begin{tikzpicture}
-                \fill (0,0) -- (0,0.3) -- ++(0.05,0) -- (0.05,0);
-                \fill (0,0.3) -- ++(0.3,0) -- (0.3,0.25) -- (0.05,0.25);
-            \end{tikzpicture}
-        }
-    }%
-}
-
-\newcommand{\ownleft}[0]{% don't remove
-    \makebox(0,0){
-        \stackon[-8pt]{\phantom{A}}{
-            \begin{tikzpicture}
-                \fill (0,0) -- (0.3,0) -- ++(0,0.05) -- (0,0.05);
-                \fill (0.3,0) -- ++(0,0.3) -- (0.25,0.3) -- (0.25,0.05);
-            \end{tikzpicture}
-        }
-    }
-}
-
 \textbf{Nota}: i blocchi di testo racchiusi con \hspace{0.2cm}\ownright{}\quotes{}\ownleft{}
-\hspace{0.2cm} esprimono dei concetti che sono stati puramente sviluppati da me,
-senza l'ausilio di terze fonti.
-
-\vspace{1cm}
-
-\ownright{}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\ownleft{}
+\hspace{0.2cm} esprimono dei concetti che sono stati puramente sviluppati da me.
+Per quando ne sappia, queste idee sono completamente originali.
 
 \pagebreak
 
@@ -416,7 +412,7 @@ e considerare alcune cifre dalla decima cifra in poi dopo la virgola risulta
 in un numero quasi casuali.
 Tutti questi fenomeni possono essere ricostruiti date le condizioni di partenza.
 
-\paragraph{Un evento puramente casuale} è un qualsiasi evento che potrebbe svolgersi in maniera differente se l'universo venisse riavvolto per ripetere nuovamente tale evento, senza che l'esecuzione dell'evento a priori abbia alcun effetto sulla nuova esecuzione.
+\paragraph{\ownright{}Un evento puramente casuale} è un qualsiasi evento che potrebbe svolgersi in maniera differente se l'universo venisse riavvolto per ripetere nuovamente tale evento, senza che l'esecuzione dell'evento a priori abbia alcun effetto sulla nuova esecuzione.
 
 Se nell'universo sono presenti eventi puramente casuali il determinismo non è corretto
 in quanto non tutti gli avvenimento sono deducibili dagli eventi precedenti.
@@ -426,7 +422,8 @@ oppure possono essere deducibili da altri fattori (pseudo-casuali)?
 Questa è la domanda saliente circa il determinismo.
 Se gli eventi puramente casuali dovessero esistere l'universo non si potrebbe basare unicamente
 su regole deterministiche.
-La scienza non è mai riuscita a dimostrare o sfatare nessuna delle due ipotesi.
+La scienza non è mai riuscita a dimostrare o sfatare nessuna delle due ipotesi.%
+\ownleft{}
 
 \subsection{Determinismo nell'anatomia}
 
@@ -464,6 +461,7 @@ nuove connessioni fra neuroni sono sempre stabilite.
 L'insieme dei funzionamenti di tutti questi organi permettono al nostro
 corpo di prendere qualsiasi decisione.
 
+\ownright{}%
 Possiamo dunque dedurre che ogni decisione mai presa da ognuno di noi è
 sostanzialmente dipendente da 3 fattori:
 \begin{enumerate}
@@ -488,10 +486,12 @@ un intervento di leucotomia oppure la malattia del morbo di Alzheimer.
 \paragraph{Ambiente circostante}
 Al momento di prendere una decisione l'ambiente circostante è uno dei principali fattori
 principali. A seconda della situazioni, cerchiamo di prendere una decisione auspicabile
-per affrontare quest'ultima.
+per affrontare quest'ultima.%
+\ownleft{}
 
 \subsection{Implicazioni nella moralità}
 
+\ownright{}%
 Assumendo il determinismo si giunge ad un concetto che può essere molto pericoloso per una società
 e le persone stesse. Questo concetto è la perdita del significato della colpa o della responsabilità, del merito e altri simili.
 
@@ -551,7 +551,8 @@ Possiamo quindi dedurre che, indipendentemente dal fatto
 che l'universo sia deterministico o meno
 per quel che riguarda gli eventi puramente casuali,
 tutte le azioni sono neutre e gli umani compiono
-ogni decisione in maniera passiva.
+ogni decisione in maniera passiva.%
+\ownleft{}
 
 \section{Il sistema giudiziario}
 
