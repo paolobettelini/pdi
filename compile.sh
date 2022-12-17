@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$2" = "--help" ]; then
+if [ "$1" = "--help" ]; then
   echo "Usage: $0 [--bibtex]"
   echo ""
   echo "--bibtex    Compile new bibtex references using biber"
@@ -9,9 +9,9 @@ fi
 
 cd src;
 
-if [ "$2" = "--bibtex" ]; then
+if [ "$1" = "--bibtex" ]; then
     lualatex *.tex
-    biber $1
+    biber main
     lualatex *.tex
 fi
 
